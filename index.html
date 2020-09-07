@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Sniper</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 </head>
 <body>
 	<table class="table">
@@ -21,13 +23,12 @@
 			</td>
 			<td>
 				<table id="buttons-table">
-					<form action="php/process.php" method="GET">
-						<tr>
+					<tr>
 							<td class="buttonText">
 								X:
 							</td>
 							<td class="textField" >
-								<input id="xField" type="text" name="X" maxlength="25" autofocus oninput="validate()" onchange="validate()">
+								<input id="xField" type="text" name="X" maxlength="25" autofocus oninput="validate()" onchange="validate()" serialize="true">
 							</td>
 							
 						</tr>
@@ -36,23 +37,23 @@
 								Y:
 							</td>
 							<td id="yField">
-								<input type="radio" name="Y" id="radioValue1" value="-5">
+								<input type="radio" name="Y" id="radioValue1" value="-5" onchange="validate()" serialize="true">
 								<label for="boxValue1">-5</label>
-								<input type="radio" name="Y" id="radioValue2" value="-4">
+								<input type="radio" name="Y" id="radioValue2" value="-4" onchange="validate()" serialize="true">
 								<label for="boxValue1">-4</label>
-								<input type="radio" name="Y" id="radioValue3" value="-3">
+								<input type="radio" name="Y" id="radioValue3" value="-3" onchange="validate()" serialize="true">
 								<label for="boxValue1">-3</label>
-								<input type="radio" name="Y" id="radioValue4" value="-2">
+								<input type="radio" name="Y" id="radioValue4" value="-2" onchange="validate()" serialize="true">
 								<label for="boxValue1">-2</label>
-								<input type="radio" name="Y" id="radioValue5" value="-1">
+								<input type="radio" name="Y" id="radioValue5" value="-1" onchange="validate()" serialize="true">
 								<label for="boxValue1">-1</label>
-								<input type="radio" name="Y" id="radioValue6" value="0">
+								<input type="radio" name="Y" id="radioValue6" value="0" onchange="validate()" serialize="true">
 								<label for="boxValue1">0</label>
-								<input type="radio" name="Y" id="radioValue7" value="1">
+								<input type="radio" name="Y" id="radioValue7" value="1" onchange="validate()" serialize="true">
 								<label for="boxValue1">1</label>
-								<input type="radio" name="Y" id="radioValue8" value="2">
+								<input type="radio" name="Y" id="radioValue8" value="2" onchange="validate()" serialize="true">
 								<label for="boxValue1">2</label>
-								<input type="radio" name="Y" id="radioValue9" value="3">
+								<input type="radio" name="Y" id="radioValue9" value="3" onchange="validate()" serialize="true">
 								<label for="boxValue1">3</label>
 							</td>
 						</tr>
@@ -61,7 +62,7 @@
 								R:
 							</td>
 							<td class="textField" >
-								<input id="rField" type="text" name="R" maxlength="25" oninput="validate()" onchange="validate()">
+								<input id="rField" type="text" name="R" maxlength="25" oninput="validate()" onchange="validate()" serialize="true">
 							</td>
 							<!-- нереализованные мечты
 							<td id="checkBox">
@@ -87,7 +88,6 @@
 								</p>
 							</td>
 						</tr>
-					</form>
 				</table>
 			</td>
 		</tr>
