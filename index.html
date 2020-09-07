@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="UTF-8">
+	<title>Sniper</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<table class="table">
+		<tr>
+			<th colspan="3" nowrap>
+		        	Сушкевич Антон Дмитриевич, P3214, вариант 2515
+    		</th>
+		</tr>
+		<tr>
+			<!--cell for the arrows of target area-->
+			<td id="arrows">
+				<canvas class="canvas" id="canvasArrows"></canvas>
+				<canvas class="canvas" id="canvasMarks"></canvas>
+				<canvas class="canvas" id="canvasDots"></canvas>
+			</td>
+			<td>
+				<table id="buttons-table">
+					<form action="php/process.php" method="GET">
+						<tr>
+							<td class="buttonText">
+								X:
+							</td>
+							<td class="textField" >
+								<input id="xField" type="text" name="X" maxlength="25" autofocus oninput="validate()" onchange="validate()">
+							</td>
+							
+						</tr>
+						<tr>
+							<td class="buttonText">
+								Y:
+							</td>
+							<td id="yField">
+								<input type="radio" name="Y" id="radioValue1" value="-5">
+								<label for="boxValue1">-5</label>
+								<input type="radio" name="Y" id="radioValue2" value="-4">
+								<label for="boxValue1">-4</label>
+								<input type="radio" name="Y" id="radioValue3" value="-3">
+								<label for="boxValue1">-3</label>
+								<input type="radio" name="Y" id="radioValue4" value="-2">
+								<label for="boxValue1">-2</label>
+								<input type="radio" name="Y" id="radioValue5" value="-1">
+								<label for="boxValue1">-1</label>
+								<input type="radio" name="Y" id="radioValue6" value="0">
+								<label for="boxValue1">0</label>
+								<input type="radio" name="Y" id="radioValue7" value="1">
+								<label for="boxValue1">1</label>
+								<input type="radio" name="Y" id="radioValue8" value="2">
+								<label for="boxValue1">2</label>
+								<input type="radio" name="Y" id="radioValue9" value="3">
+								<label for="boxValue1">3</label>
+							</td>
+						</tr>
+						<tr>
+							<td class="buttonText">
+								R:
+							</td>
+							<td class="textField" >
+								<input id="rField" type="text" name="R" maxlength="25" oninput="validate()" onchange="validate()">
+							</td>
+							<!-- нереализованные мечты
+							<td id="checkBox">
+								<input type="checkbox" name="R" id="boxValue1">
+								<label for="boxValue1">1</label>
+								<input type="checkbox" name="R" id="boxValue2">
+								<label for="boxValue2">1.5</label>
+								<input type="checkbox" name="R" id="boxValue3">
+								<label for="boxValue3">2</label>
+								<input type="checkbox" name="R" id="boxValue4">
+								<label for="boxValue4">2.5</label>
+								<input type="checkbox" name="R" id="boxValue5">
+								<label for="boxValue5">3</label>
+							</td>-->
+						</tr>
+						<tr>
+							<td>
+								<button type="submit" value="send" id="sendingButton" >suck</button>
+							</td>
+							<td>
+								<p class="commonText" id="informationText">
+									
+								</p>
+							</td>
+						</tr>
+					</form>
+				</table>
+			</td>
+		</tr>
+
+<!--
+		<tr>
+			<td class="left-filling"></td>
+			<td id="arrows">
+				<canvas id="canvas"></canvas>
+			</td
+			<td class="right-filling"></td>
+		</tr>
+		<tr>
+			<td class="left-filling"></td>
+			<td>
+				<table id="buttons-table">
+					<tr>
+						<td class="buttonText">
+							X:
+						</td>
+						<td id="radioButton">
+							<input type="radio" name="X" id="radioValue1">
+							<label for="boxValue1">-3</label>
+							<input type="radio" name="X" id="radioValue2">
+							<label for="boxValue1">-2</label>
+							<input type="radio" name="X" id="radioValue3">
+							<label for="boxValue1">-1</label>
+							<input type="radio" name="X" id="radioValue4">	
+							<label for="boxValue1">0</label>
+							<input type="radio" name="X" id="radioValue5">
+							<label for="boxValue1">1</label>
+							<input type="radio" name="X" id="radioValue6">
+							<label for="boxValue1">2</label>
+							<input type="radio" name="X" id="radioValue7">
+							<label for="boxValue1">3</label>
+							<input type="radio" name="X" id="radioValue8">
+							<label for="boxValue1">4</label>
+							<input type="radio" name="X" id="radioValue9">
+							<label for="boxValue1">5</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="buttonText">
+							Y:
+						</td>
+						<td id="textField">
+							<input type="text" name="Y" maxlength="25">
+						</td>
+					</tr>
+					<tr>
+						<td class="buttonText">
+							R:
+						</td>
+						<td id="checkBox">
+							<input type="checkbox" name="R" id="boxValue1">
+							<label for="boxValue1">1</label>
+							<input type="checkbox" name="R" id="boxValue2">
+							<label for="boxValue2">1.5</label>
+							<input type="checkbox" name="R" id="boxValue3">
+							<label for="boxValue3">2</label>
+							<input type="checkbox" name="R" id="boxValue4">
+							<label for="boxValue4">2.5</label>
+							<input type="checkbox" name="R" id="boxValue5">
+							<label for="boxValue5">3</label>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td class="right-filling"></td>
+		</tr>
+		<tr>
+			<td class="left-filling"></td>
+				<table class="results">
+					
+				</table>
+			<td class="right-filling"></td>
+		</tr>
+	-->
+	<tr>
+		<table class="table" id="resultTable">
+			<tr>
+				<td class="tableText">
+					X
+				</td>
+				<td class="tableText">
+					Y
+				</td>
+				<td class="tableText">
+					R
+				</td>
+				<td  class="tableText">
+					Hit
+				</td>
+				<td class="tableText">
+					Data time
+				</td>
+				<td class="tableText">
+					Anser time
+				</td>
+			</tr>
+		</table>
+	</tr>
+	<tr>
+		<!--undertable space for correct locating the table-->
+		<td>
+			<audio controls="" autoplay="">
+				<!-- <source src="shiza.mp3"> -->
+			</audio>
+		</td>
+	</tr>
+	</table>
+	<script src="js/arrows.js"></script>
+	<script src="js/validation.js"></script>
+	<script src="js/send.js"></script>
+	<script src="js/tableManager.js"></script>
+</body>
+</html>
