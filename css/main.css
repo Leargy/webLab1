@@ -1,0 +1,53 @@
+.table {
+	width: 100%
+}
+.header-text {
+	text-align: left;
+	font: 12pt fantasy;
+}
+#buttons-table {
+	width: 100%
+}
+.table {
+ padding: 5px;
+ border: 1px solid #000;
+}
+/*#arrows {
+	width: 100%
+	hight: 500px;
+}
+#canvas {
+	min-width: 200px;
+	min-height: 200px;
+	max-width: 500px;
+	max-height: 500px;
+}*/
+
+TD.buttonText {
+	text-align: right;
+	width: 20%
+}
+TD {
+	 border: 1px solid #000;
+}
+
+.canvas {
+	position:absolute; top:0px; left:0px;
+} 
+#canvasArrows {
+  z-index: 0;
+   top:0px; left:0px;
+}
+#canvasMarks {
+  z-index: 1;
+  position: relative; top:0px; left:0px;
+}
+
+/*TD.left-filling {
+	background: #ccc;
+	width: 200px
+}
+TD.right-filling {
+	background: #ccc;
+	width: 200px
+}*/
