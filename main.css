@@ -1,0 +1,116 @@
+body {
+	background-image: url(sources/site_bk2.png);
+	border: solid #ecdc76;
+	margin: 0px;
+}
+
+#header-text {
+	text-align: left;
+	font: 18pt fantasy;
+	color: #ecdc76;
+}
+
+#buttons-table {
+	width: 100%;
+}
+
+#shield {
+	background-image: url(sources/shield.png);
+	/*horizontal-align: center;*/
+	height: 260px;
+	width: 260px;
+	margin-left: auto;
+    margin-right: auto;
+	/*position: absolute;*/
+}
+
+Button.submitButton {
+	background-image: url(sources/ok_buttn2.png);
+	vertical-align: middle;
+	height: 29px;
+	width: 55px;
+	border-radius: 6px
+}
+Button.submitButton:hover{
+    background-color: #909090;
+}
+Button.submitButton:active{
+    box-shadow: inset 1px 1px 10px -1px;
+}
+
+#mainTable {
+	margin-top: 60px;
+}
+
+.table {
+	margin: auto;
+	width: 1060px;
+	background: url(sources/site_bk5.png);
+	border-color: #ecdc76;
+	border-style: ridge;
+	padding: 20px;
+}
+.canvas {
+	display: block;
+   margin: 0 auto;
+   top:0px;
+}
+
+TD.headerText {
+	color: #9e914e;
+	text-align: center;
+	width: 20%;
+}
+
+.commonText {
+	font-size: 12pt;
+	color: #adb0af;
+}
+
+TD {
+	padding: 1px;
+	border-color: #536798;
+	border-style: ridge;
+	background: url(sources/site_bk3.png);
+}
+
+.radioB {
+	color: #adb0af;
+}
+
+#informationCell {
+	height: 55px;
+	text-align: center;
+}
+
+#canvasArrows {
+  z-index: 0;
+   top:0px; left:0px;
+}
+
+#canvasMarks {
+  z-index: 1;
+  position: absolute;
+  top:121px;
+}
+
+#canvasDots{ 
+  z-index: 2;
+  position: absolute;
+  top:121px;
+}
+#resultTable {
+	min-width: 600px ;
+    table-layout: fixed;
+    /*margin-bottom: 15px;*/
+}
+#fixser {
+	min-width: 490px;
+}
+#resultTableFixer {
+	min-width: 600px;	
+}
+#resultCells {
+	nowrap: true;
+	overflow: auto;
+}
